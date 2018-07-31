@@ -1,2 +1,6 @@
 @import "reset";
+@import "mixin/clearfix";
 @import "shared/header";
+@import "articles/content";
+@import "shared/articles";  //記事一覧のcss
+
