@@ -1,0 +1,18 @@
+.content
+  .content__categories
+    = link_to image_tag('category.png', class: "content__categories__title")
+    %ul
+      %li.category__name
+        = link_to '恋愛', "#", class: "add_color"
+      %li.category__name
+        = link_to 'おでかけ', "#", class: "add_color"
+      %li.category__name
+        = link_to 'ファッション', "#", class: "add_color"
+      %li.category__name
+        = link_to 'グルメ', "#", class: "add_color"
+      %li.category__name
+        = link_to 'メイク', "#", class: "add_color"
+  = render partial: 'shared/articles'
+  .content__subs
+    = render partial: 'shared/rankings'
+    = render partial: 'shared/tags'
