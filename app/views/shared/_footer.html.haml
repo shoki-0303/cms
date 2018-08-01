@@ -1,2 +1,29 @@
-%footer
-  footer
+%footer.footer
+  .footer__categories
+    %h3 CATEGORY
+    %ul
+      %li.footer_category
+        = link_to '恋愛'
+      %li.footer_category
+        = link_to 'おでかけ'
+      %li.footer_category
+        = link_to 'ファッション'
+      %li.footer_category
+        = link_to 'グルメ'
+      %li.footer_category
+        = link_to 'メイク'
+  .footer__links
+    %h3 ABOUT
+    %ul
+      %li.footer_link
+        = link_to 'トップページ', root_path
+      %li.footer_link
+        = link_to 'タグ一覧'
+      %li.footer_link
+        = link_to 'カテゴリー'
+      %li.footer_link
+        = link_to '記事ランキング'
+      %li.footer_link
+        = link_to '人気ライター'
+  .footer__copyright
+    %p copyright
