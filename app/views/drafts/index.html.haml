@@ -1,0 +1,20 @@
+%header.drafts-header
+  = image_tag('logo.png')
+  %h1.drafts-header__title
+    Article management
+  %ul.drafts-header__groval-nav
+.drafts-contents
+  .drafts-sub
+    %h2.drafts-sub__title links
+    %ul
+      %li.drafts-sub__link
+        = link_to '記事作成画面', "#"
+      %li.drafts-sub__link
+        = link_to 'カテゴリー管理画面', "#"
+      %li.drafts-sub__link
+        = link_to 'タグ管理画面', "#"
+      %li.drafts-sub__link
+        = link_to 'トップページ', "#"
+  .drafts-main
+    %ul.drafts__articles
+      = render partial: 'drafts/draftarticle'
