@@ -7,8 +7,8 @@
     %li.drafts__article__middle__writer SUCLE編集部
   .drafts__article__right
     =link_to '編集', "#", class: "edit__btn"
-    =link_to '削除', "#", class: "destroy__btn"
-    =link_to '公開', "#", class: "release__btn"
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)
 %li.drafts__article
   .drafts__article__left
     = image_tag('/images/beach.jpeg', class: "eye-catch")
@@ -18,8 +18,8 @@
     %li.drafts__article__middle__writer SUCLE編集部
   .drafts__article__right
     =link_to '編集', "#", class: "edit__btn"
-    =link_to '削除', "#", class: "destroy__btn"
-    =link_to '公開', "#", class: "release__btn"
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)
 %li.drafts__article
   .drafts__article__left
     = image_tag('/images/beach.jpeg', class: "eye-catch")
@@ -29,8 +29,8 @@
     %li.drafts__article__middle__writer SUCLE編集部
   .drafts__article__right
     =link_to '編集', "#", class: "edit__btn"
-    =link_to '削除', "#", class: "destroy__btn"
-    =link_to '公開', "#", class: "release__btn"
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)
 %li.drafts__article
   .drafts__article__left
     = image_tag('/images/beach.jpeg', class: "eye-catch")
@@ -40,8 +40,8 @@
     %li.drafts__article__middle__writer SUCLE編集部
   .drafts__article__right
     =link_to '編集', "#", class: "edit__btn"
-    =link_to '削除', "#", class: "destroy__btn"
-    =link_to '公開', "#", class: "release__btn"
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)
 %li.drafts__article
   .drafts__article__left
     = image_tag('/images/beach.jpeg', class: "eye-catch")
@@ -51,5 +51,5 @@
     %li.drafts__article__middle__writer SUCLE編集部
   .drafts__article__right
     =link_to '編集', "#", class: "edit__btn"
-    =link_to '削除', "#", class: "destroy__btn"
-    =link_to '公開', "#", class: "release__btn"
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)

@@ -10,11 +10,14 @@
       %li.drafts-sub__link
         = link_to '記事作成画面', "#"
       %li.drafts-sub__link
-        = link_to 'カテゴリー管理画面', "#"
+        = link_to 'ユーザー情報変更', edit_user_path(current_user)
       %li.drafts-sub__link
-        = link_to 'タグ管理画面', "#"
-      %li.drafts-sub__link
-        = link_to 'トップページ', "#"
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+      - if admin_user?(current_user)
+        %li.drafts-sub__link
+          = link_to 'カテゴリー管理画面', "#"
+        %li.drafts-sub__link
+          = link_to 'タグ管理画面', "#"
   .drafts-main
     %ul.drafts__articles
       = render partial: 'drafts/draft_article'
