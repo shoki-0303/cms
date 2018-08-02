@@ -1,3 +1,4 @@
+= render partial: 'shared/header'
 .content
   .content__categories
     = link_to image_tag('category.png', class: "content__categories__title")
@@ -16,3 +17,4 @@
   .content__subs
     = render partial: 'shared/rankings'
     = render partial: 'shared/tags'
+= render partial: 'shared/footer'
