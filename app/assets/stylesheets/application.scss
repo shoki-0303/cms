@@ -1,8 +1,9 @@
 @import "reset";
+@import "variable";
 @import "mixin/clearfix";
 @import "shared/header";
 @import "articles/content";
-@import "shared/articles";  //記事一覧のcss
+@import "shared/articles";
 @import "shared/rankings";
 @import "shared/tags";
 @import "shared/footer";
@@ -10,4 +11,5 @@
 @import "modules/user";
 @import "modules/form";
 @import "font-awesome";
+
 
