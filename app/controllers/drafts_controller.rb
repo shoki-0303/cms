@@ -8,7 +8,7 @@ class DraftsController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.new(article_params)
     if @article.save
       redirect_to drafts_path
     else
@@ -19,6 +19,6 @@ class DraftsController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :image, :body).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :description, :image, :body)
   end
 end

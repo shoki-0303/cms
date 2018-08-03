@@ -10,10 +10,10 @@ $(function(){
       return function(e) {
         $preview.empty();
         $preview.append($('<img>').attr({
-                  src: e.target.result,
-                  class: "preview",
-                  title: file.name
-              }));
+          src: e.target.result,
+          class: "preview",
+          title: file.name
+        }));
       };
     })(file);
     reader.readAsDataURL(file);
