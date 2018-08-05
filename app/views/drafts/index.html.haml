@@ -20,4 +20,4 @@
           = link_to 'タグ管理画面', "#"
   .drafts-main
     %ul.drafts__articles
-      = render partial: 'drafts/draft_article'
+      = render partial: 'drafts/article', collection: @articles

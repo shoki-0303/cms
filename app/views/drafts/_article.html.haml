@@ -1,0 +1,14 @@
+%li.drafts__article
+  .drafts__article__left
+    = image_tag(article.image, class: "eye-catch")
+  %ul.drafts__article__middle
+    %li.drafts__article__middle__date
+      = article.updated_at
+    %li.drafts__article__middle__title
+      = article.title
+    %li.drafts__article__middle__writer
+      = article.user.name
+  .drafts__article__right
+    =link_to '編集', edit_draft_path(article), class: "edit__btn" if is_your_article?(article, current_user) or admin_user?(current_user)
+    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '公開', "#", class: "release__btn" if admin_user?(current_user)
