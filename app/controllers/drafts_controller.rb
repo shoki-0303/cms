@@ -19,6 +19,7 @@ class DraftsController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    redirect_to drafts_path unless @article.user_id == current_user.id or current_user.admin_flg == true
   end
 
   def update
