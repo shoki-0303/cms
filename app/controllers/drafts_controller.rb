@@ -1,7 +1,7 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @articles = Article.includes(:user)
+    @articles = Article.includes(:user).order("created_at DESC")
   end
 
   def new
