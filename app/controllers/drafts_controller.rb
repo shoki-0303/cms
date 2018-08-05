@@ -1,6 +1,7 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
   def index
+    @articles = Article.includes(:user)
   end
 
   def new
