@@ -1,5 +1,6 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_article, only: [:edit, :update]
   def index
     @articles = Article.includes(:user).order("created_at DESC")
   end
@@ -18,12 +19,10 @@ class DraftsController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
     redirect_to drafts_path unless @article.user_id == current_user.id or current_user.admin_flg == true
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to drafts_path
     else
@@ -35,5 +34,9 @@ class DraftsController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :description, :image, :body)
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 end
