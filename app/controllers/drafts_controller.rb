@@ -18,9 +18,16 @@ class DraftsController < ApplicationController
   end
 
   def edit
+    @article = Article.find(params[:id])
   end
 
   def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to drafts_path
+    else
+      render :edit
+    end
   end
 
   private
