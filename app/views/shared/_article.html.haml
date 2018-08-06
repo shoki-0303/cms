@@ -1,0 +1,17 @@
+%ul
+  = link_to article_path(article), class: "article__link" do
+    %li.article
+      = image_tag(article.image, class: "eye-catch")
+      %ul.article__content
+        %li.article__category
+          おでかけ
+        %li.article__tag
+          %p #ビーチ
+        %li.article__tag
+          %p #女子旅
+        %li.article__title
+          = article.title
+        %li.article__description
+          %p.article__description__text
+            = article.description
+

@@ -6,10 +6,13 @@
   .pop {
     background: image-url('poping.png');
   }
+  .article__link {
+    color: black;
+  }
   .article {
     width: 600px;
     margin: 10px 0;
-    padding: 8px;
+    padding: 12px;
     padding-right: 0;
     box-shadow: 0 1px 4px rgba(0,0,0,0.12);
     position: relative;
@@ -38,11 +41,18 @@
       }
       .article__title {
         font-size: 1.5rem;
-        margin: 10px 0;
+        margin: 8px 0;
       }
       .article__description {
         font-size: 1.2rem;
         color: #80808096;
+        &__text {
+          height: 55px;
+          width: 370px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+        }
       }
     }
   }
