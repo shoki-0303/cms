@@ -1,6 +1,6 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_article, only: [:edit, :update]
+  before_action :set_article, only: [:edit, :update, :release]
   def index
     @articles = Article.includes(:user).order("created_at DESC")
   end
@@ -28,6 +28,11 @@ class DraftsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def release
+    @article.update_attributes(release: true) if current_user.admin_flg == true
+    redirect_to drafts_path
   end
 
   private
