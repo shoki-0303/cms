@@ -1,0 +1,12 @@
+.release-article__content__header
+%h1.release-article__content__title
+  = @article.title
+.release-article__content__tags
+  %li.release-article__content__tags__tag
+    Ruby
+  %li.release-article__content__tags__tag
+    programing
+%p.release-article__content__description
+  = @article.description
+%p.release-article__content__body
+  = markdown(@article.body).html_safe
