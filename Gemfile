@@ -36,6 +36,8 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "font-awesome-rails"
+gem 'redcarpet'
+gem 'coderay'
 
 
 group :development, :test do
