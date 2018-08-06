@@ -1,0 +1,12 @@
+.categories {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #80808029;
+  padding: 30px 0;
+  &__category {
+    height: 400px;
+    width: 600px;
+    background-color: gray;
+    margin: 0 auto 30px;
+  }
+}
