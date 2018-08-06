@@ -1,0 +1,55 @@
+.release-article {
+  @include clearfix();
+  &__content {
+    float: left;
+    margin: 20px;
+    margin-left: 150px;
+    width: 800px;
+    padding: 20px;
+    &__header {
+      height: 60px;
+      background-color: #80808040;
+    }
+    & h1 {
+      font-size: 3.0rem;
+      padding: 15px;
+      padding-bottom: 5px;
+      border-bottom: solid 3px #62cbd0;
+      margin-bottom: 10px;
+    }
+    &__tags {
+      padding: 10px;
+      display: flex;
+    &__tag {
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+    }
+    & h2 {
+      font-size: 2.5rem;
+      padding: 15px;
+      font-weight: bold;
+      color: #494949;
+      background: #f4f4f4;
+      border-left: solid 5px #62cbd0;
+      border-bottom: solid 3px #d7d7d7;
+    }
+    & h3 {
+      font-size: 2.0rem;
+      padding: 15px;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      border-left: solid 5px #62cbd0;
+    }
+    & h4 {
+      font-size: 2.0rem;
+      padding: 15px;
+      border-bottom: dashed 2px #62cbd0;
+    }
+    & p {
+      font-size: 1.5rem;
+      padding: 15px;
+      line-height: 3.0rem;
+    }
+  }
+}
