@@ -3,11 +3,12 @@
   = image_tag('bigcategory.png', class: "pop")
   - @categories.each do |category|
     .categories__category
-      = image_tag(category.image, class: "categories__category__image")
-      .categories__category__name
-        = category.name
-      .categories__category__content
-        = category.content
-      .categories__category__admin
-        = link_to '編集', edit_category_path(category) if user_signed_in? && admin_user?(current_user)
+      = link_to category_path(category) do
+        = image_tag(category.image, class: "categories__category__image")
+        .categories__category__name
+          = category.name
+        .categories__category__content
+          = category.content
+        .categories__category__admin
+          = link_to 'edit', edit_category_path(category) if user_signed_in? && admin_user?(current_user)
 = render partial: 'shared/footer'
