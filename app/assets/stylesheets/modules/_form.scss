@@ -60,6 +60,19 @@
         max-width: 100%;
       }
     }
+    &__category {
+      border: solid 3px $blue;
+      display: inline-block;
+      border-radius: 10px;
+      & #article_category_id {
+        height: 50px;
+        font-size: 1.5rem;
+        border: none;
+        color: $brawn;
+        font-weight: bold;
+        outline: none;
+      }
+    }
     &__image {
       margin-bottom: 10px;
       font-weight: bold;

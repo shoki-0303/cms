@@ -38,7 +38,7 @@ class DraftsController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :image, :body)
+    params.require(:article).permit(:title, :description, :category_id, :image, :body)
   end
 
   def set_article
