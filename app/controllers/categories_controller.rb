@@ -1,12 +1,13 @@
 class CategoriesController < ApplicationController
+  include CallCategories
   before_action :set_category, only: [:show, :edit, :update]
 
   def index
-    @categories = Category.all
+    call_categories
   end
 
   def show
-    @categories = Category.all
+    call_categories
     @articles = @category.articles
   end
 
