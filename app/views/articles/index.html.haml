@@ -3,16 +3,9 @@
   .content__categories
     = link_to image_tag('category.png', class: "content__categories__title")
     %ul
-      %li.category__name
-        = link_to '恋愛', "#", class: "add_color"
-      %li.category__name
-        = link_to 'おでかけ', "#", class: "add_color"
-      %li.category__name
-        = link_to 'ファッション', "#", class: "add_color"
-      %li.category__name
-        = link_to 'グルメ', "#", class: "add_color"
-      %li.category__name
-        = link_to 'メイク', "#", class: "add_color"
+      - @categories.each do |category|
+        %li.category__name
+          = link_to category.name, category_path(category), class: "add_color"
   .content__articles
     = image_tag('pickup.png', class: "pop")
     = render partial: 'shared/article', collection: @articles
