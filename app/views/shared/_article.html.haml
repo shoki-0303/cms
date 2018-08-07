@@ -4,7 +4,7 @@
       = image_tag(article.image, class: "eye-catch")
       %ul.article__info__content
         %li.article__info__content__category
-          おでかけ
+          = article.category.name
         %li.article__info__content__tag
           %p #ビーチ
         %li.article__info__content__tag

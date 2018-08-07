@@ -2,16 +2,9 @@
   .footer__categories
     %h3 CATEGORY
     %ul
-      %li.footer_category
-        = link_to '恋愛'
-      %li.footer_category
-        = link_to 'おでかけ'
-      %li.footer_category
-        = link_to 'ファッション'
-      %li.footer_category
-        = link_to 'グルメ'
-      %li.footer_category
-        = link_to 'メイク'
+      - @categories.each do |category|
+        %li.footer_category
+          = link_to category.name, category_path(category), class: "add_color"
   .footer__links
     %h3 ABOUT
     %ul
@@ -20,7 +13,7 @@
       %li.footer_link
         = link_to 'タグ一覧'
       %li.footer_link
-        = link_to 'カテゴリー'
+        = link_to 'カテゴリー', categories_path
       %li.footer_link
         = link_to '記事ランキング'
       %li.footer_link

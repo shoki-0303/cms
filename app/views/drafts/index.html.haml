@@ -15,7 +15,9 @@
         = link_to "ログアウト", destroy_user_session_path, method: :delete
       - if admin_user?(current_user)
         %li.drafts-sub__link
-          = link_to 'カテゴリー管理画面', "#"
+          = link_to 'カテゴリー管理画面', categories_path
+        %li.drafts-sub__link
+          = link_to 'カテゴリー作成画面', new_category_path
         %li.drafts-sub__link
           = link_to 'タグ管理画面', "#"
   .drafts-main
