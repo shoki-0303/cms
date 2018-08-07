@@ -1,0 +1,25 @@
+%header.drafts-header
+  = image_tag('logo.png')
+  %h1.drafts-header__title
+    Article management
+.category__form
+  = form_for @category do |f|
+    .category__form__label
+      = f.label :name, class: "form_label"
+    .category__form__name
+      = f.text_field :name, class: "form_name"
+    .category__form__label
+      = f.label :image, class: "form_label"
+    .category__form__image
+      = f.label :image do
+        %p 画像を選択
+        = fa_icon 'picture-o', class: "fa-5x"
+        = f.file_field :image, class: "file_btn"
+    .preview
+      = image_tag(src=@category.image)
+    .category__form__label
+      = f.label :content, class: "form_label"
+    .category__form__content
+      = f.text_area  :content, class: "form_content"
+    .category__form__btn
+      = f.submit 'SAVE', class: "form_btn"
