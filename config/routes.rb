@@ -8,5 +8,5 @@ Rails.application.routes.draw do
       get :release
     end
   end
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :new, :create]
 end
