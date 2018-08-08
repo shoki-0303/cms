@@ -17,8 +17,9 @@
       .draft-article-area__label
         = f.label :tag, class: "form_label"
       .draft-article-area__tag
-        = f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |b|
-          = b.label { b.check_box + b.text }
+        %input.draft-article-area__tag__field#tag-search-field{placeholder: "タグを検索", type: "text"}
+        #tag-result
+        #tag-search-result
       .draft-article-area__label
         = f.label :description, class: "form_label"
       .draft-article-area__description

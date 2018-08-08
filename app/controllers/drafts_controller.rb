@@ -7,6 +7,11 @@ class DraftsController < ApplicationController
 
   def new
     @article = Article.new
+    @tags = Tag.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

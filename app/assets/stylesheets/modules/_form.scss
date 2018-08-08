@@ -74,6 +74,19 @@
         background-color: white;
       }
     }
+    &__tag {
+      margin: 15px 0;
+      &__field {
+        padding: 0.5em 1em;
+        font-weight: bold;
+        background: white;
+        border: solid 3px $blue;
+        border-radius: 10px;
+        outline: none;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+    }
     &__image {
       margin-bottom: 10px;
       font-weight: bold;
