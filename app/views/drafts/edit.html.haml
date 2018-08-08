@@ -11,6 +11,15 @@
       .draft-article-area__title
         = f.text_field :title, class: "form_title"
       .draft-article-area__label
+        = f.label :category_id, class: "form_label"
+      .draft-article-area__category
+        = f.collection_select :category_id, Category.all, :id, :name
+      .draft-article-area__label
+        = f.label :tag, class: "form_label"
+      .draft-article-area__tag
+        = f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |b|
+          = b.label { b.check_box + b.text }
+      .draft-article-area__label
         = f.label :description, class: "form_label"
       .draft-article-area__description
         = f.text_area :description, class: "form_description"

@@ -2,10 +2,9 @@
 %h1.release-article__content__title
   = @article.title
 .release-article__content__tags
-  %li.release-article__content__tags__tag
-    Ruby
-  %li.release-article__content__tags__tag
-    programing
+  - @article.tags.each do |tag|
+    %li.release-article__content__tags__tag
+      = "#" +tag.name
 %p.release-article__content__description
   = @article.description
 %p.release-article__content__body
