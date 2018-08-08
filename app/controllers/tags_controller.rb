@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  before_action :only_admin
 
   def index
     @tag = Tag.new
@@ -26,5 +27,9 @@ class TagsController < ApplicationController
 
   def tag_params
     params.require(:tag).permit(:name)
+  end
+
+  def only_admin
+    redirect_to drafts_path unless current_user.admin_flg == true
   end
 end
