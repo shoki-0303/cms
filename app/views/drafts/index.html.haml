@@ -19,7 +19,7 @@
         %li.drafts-sub__link
           = link_to 'カテゴリー作成画面', new_category_path
         %li.drafts-sub__link
-          = link_to 'タグ管理画面', "#"
+          = link_to 'タグ管理画面', tags_path
   .drafts-main
     %ul.drafts__articles
       = render partial: 'drafts/article', collection: @articles
