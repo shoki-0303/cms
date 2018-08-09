@@ -1,7 +1,8 @@
 $(function() {
 
+  var tags_area = $('#tag-search-result');
+
   function appendTag(tag) {
-    var tags_area = $('#tag-search-result');
     var tag =`
     <div class="tag-items">
     <p class="tag-items__name">${tag.name}</p>
@@ -12,7 +13,6 @@ $(function() {
   }
 
   function appendNoTag(word) {
-    var tags_area = $('#tag-search-result');
     var tag =`
     <li><p>一致するタグは存在しません</p></li>
     `;
@@ -40,7 +40,6 @@ $(function() {
         dataType: 'json'
       })
       .done(function(tags) {
-        console.log(tags)
         $('#tag-search-result').empty();
         if (tags.length !== 0) {
           tags.forEach(function(tag){

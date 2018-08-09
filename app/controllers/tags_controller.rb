@@ -2,6 +2,7 @@ class TagsController < ApplicationController
   include CallCategories
   include CallTags
   before_action :only_admin
+  before_action :set_tag, only: [:show, :destroy]
 
   def index
     @tag = Tag.new
@@ -9,9 +10,8 @@ class TagsController < ApplicationController
   end
 
   def show
-    @tag = Tag.find(params[:id])
-    call_categories
-    call_tags_popular20
+    @categories = call_categories
+    @tags = call_tags_popular20
     @articles = @tag.articles
   end
 
@@ -27,7 +27,6 @@ class TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find(params[:id])
     @tag.destroy if current_user.admin_flg == true
     redirect_to tags_path
   end
@@ -40,5 +39,9 @@ class TagsController < ApplicationController
 
   def only_admin
     redirect_to drafts_path unless current_user.admin_flg == true
+  end
+
+  def set_tag
+    @tag = Tag.find(params[:id])
   end
 end

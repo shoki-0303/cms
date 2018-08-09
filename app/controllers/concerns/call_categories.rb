@@ -1,5 +1,5 @@
 module CallCategories
   def call_categories
-    @categories = Category.all
+    Category.all
   end
 end
