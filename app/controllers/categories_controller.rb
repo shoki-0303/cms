@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   include CallCategories
+  include CallTags
   before_action :set_category, only: [:show, :edit, :update]
 
   def index
@@ -8,7 +9,7 @@ class CategoriesController < ApplicationController
 
   def show
     call_categories
-    @articles = @category.articles
+    call_tags_popular20
     @tags = Tag.joins(:article_tags).group(:tag_id).order('count(article_id) desc').limit(20)
   end
 

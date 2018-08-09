@@ -4,7 +4,7 @@
   = @article.title
 .release-article__content__tags
   - @article.tags.each do |tag|
-    = link_to "##{tag.name}", '', class: "release-article__content__tags__tag"
+    = link_to "##{tag.name}", tag_path(tag), class: "release-article__content__tags__tag"
 %p.release-article__content__description
   = @article.description
 %p.release-article__content__body

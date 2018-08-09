@@ -13,8 +13,8 @@
         padding: 7px 15px;
         color: white;
         font-weight: bold;
-        border: solid #62cbd0;
-        background-color: #62cbd0;
+        border: solid $emerald-green;
+        background-color: $emerald-green;
         display: inline-block;
         border-radius: 20px;
       }
@@ -23,7 +23,7 @@
       font-size: 3.0rem;
       padding: 15px;
       padding-bottom: 5px;
-      border-bottom: solid 3px #62cbd0;
+      border-bottom: solid 3px $emerald-green;
       margin-bottom: 10px;
     }
     &__tags {
@@ -45,7 +45,7 @@
       font-weight: bold;
       color: #494949;
       background: #f4f4f4;
-      border-left: solid 5px #62cbd0;
+      border-left: solid 5px $emerald-green;
       border-bottom: solid 3px #d7d7d7;
       margin: 20px 0;
     }
@@ -54,13 +54,13 @@
       padding: 15px;
       font-weight: bold;
       padding: 0.25em 0.5em;
-      border-left: solid 5px #62cbd0;
+      border-left: solid 5px $emerald-green;
       margin: 20px 0;
     }
     & h4 {
       font-size: 2.0rem;
       padding: 15px;
-      border-bottom: dashed 2px #62cbd0;
+      border-bottom: dashed 2px $emerald-green;
       margin: 20px 0;
     }
     & p {

@@ -6,6 +6,13 @@
   .pop {
     background: image-url('poping.png');
   }
+  &__tag {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: solid $emerald-green;
+    text-align: center;
+    font-size: 2.0rem;
+  }
   .article {
     color: black;
     &__info {

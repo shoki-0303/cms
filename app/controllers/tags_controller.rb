@@ -1,9 +1,18 @@
 class TagsController < ApplicationController
+  include CallCategories
+  include CallTags
   before_action :only_admin
 
   def index
     @tag = Tag.new
     @tags = Tag.order("id ASC")
+  end
+
+  def show
+    @tag = Tag.find(params[:id])
+    call_categories
+    call_tags_popular20
+    @articles = @tag.articles
   end
 
   def create
