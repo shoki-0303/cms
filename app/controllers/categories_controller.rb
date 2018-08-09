@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @articles = @category.articles
   end
 
   def new
