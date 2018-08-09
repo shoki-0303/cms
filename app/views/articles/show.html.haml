@@ -3,6 +3,6 @@
   .release-article__content
     = render partial: 'articles/article'
   .content__subs
-    = render partial: 'shared/rankings'
+    = render partial: 'shared/ranking_article', collection: @ranking_articles
     = render partial: 'shared/tags'
 = render partial: 'shared/footer'
