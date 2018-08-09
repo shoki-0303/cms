@@ -5,10 +5,9 @@
       %ul.article__info__content
         %li.article__info__content__category
           = article.category.name
-        %li.article__info__content__tag
-          %p #ビーチ
-        %li.article__info__content__tag
-          %p #女子旅
+        - article.tags.each do |tag|
+          %li.article__info__content__tag
+            = "#" + tag.name
         %li.article__info__content__title
           = article.title
         %li.article__info__content__description

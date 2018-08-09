@@ -1,0 +1,18 @@
+.tag_alert
+  = notice
+%header.drafts-header
+  = image_tag('logo.png')
+  %h1.drafts-header__title
+    Article management
+.content__tag
+  %h2.content__tag__title tag list
+  %ol.content__tag__lists
+    - @tags.each do |tag|
+      %li.content__tag__lists__list
+        = tag.name
+        = link_to '削除', tag_path(tag), method: :delete, class: "content__tag__lists__list__delete"
+  = form_for @tag do |f|
+    = f.text_field :name, class: "content__tag__form"
+    = f.submit 'create', class: "content__tag__btn"
+
+

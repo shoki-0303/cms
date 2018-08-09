@@ -1,14 +1,14 @@
 class CategoriesController < ApplicationController
   include CallCategories
+  include CallTags
   before_action :set_category, only: [:show, :edit, :update]
+  before_action :set_categories, only: [:index, :show]
+  before_action :set_tags, only: [:show]
 
   def index
-    call_categories
   end
 
   def show
-    call_categories
-    @articles = @category.articles
   end
 
   def new
@@ -44,5 +44,13 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+  end
+
+  def set_categories
+    @categories = call_categories
+  end
+
+  def set_tags
+    @tags = call_tags_popular20
   end
 end

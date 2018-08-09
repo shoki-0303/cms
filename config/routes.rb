@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index, :show, :new, :create, :edit, :update]
+  resources :tags, only: [:index, :show, :create, :destroy]
 end

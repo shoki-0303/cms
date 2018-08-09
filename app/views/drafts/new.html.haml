@@ -15,6 +15,12 @@
       .draft-article-area__category
         = f.collection_select :category_id, Category.all, :id, :name
       .draft-article-area__label
+        = f.label :tag, class: "form_label"
+      .draft-article-area__tag
+        %input.draft-article-area__tag__field#tag-search-field{placeholder: "タグを検索", type: "text"}
+        #tag-result
+        #tag-search-result
+      .draft-article-area__label
         = f.label :description, class: "form_label"
       .draft-article-area__description
         = f.text_area :description, class: "form_description", placeholder: "200~300文字程度で記事の内容をまとめてください"

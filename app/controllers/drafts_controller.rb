@@ -7,6 +7,11 @@ class DraftsController < ApplicationController
 
   def new
     @article = Article.new
+    @tags = Tag.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
@@ -38,7 +43,7 @@ class DraftsController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :category_id, :image, :body)
+    params.require(:article).permit(:title, :description, :category_id, :image, :body, {:tag_ids => []})
   end
 
   def set_article
