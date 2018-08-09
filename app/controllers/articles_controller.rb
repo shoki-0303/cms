@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article_tags = @article.tags
     call_categories
     call_tags_popular20
   end

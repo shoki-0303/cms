@@ -3,8 +3,7 @@
 %h1.release-article__content__title
   = @article.title
 .release-article__content__tags
-  - @article.tags.each do |tag|
-    = link_to "##{tag.name}", tag_path(tag), class: "release-article__content__tags__tag"
+  = render partial: 'articles/article_tag', collection: @article_tags
 %p.release-article__content__description
   = @article.description
 %p.release-article__content__body
