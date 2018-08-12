@@ -1,0 +1,40 @@
+#tag-search-result {
+  & .tag-items {
+    display: inline-flex;
+    padding: 5px 10px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin: 5px 10px;
+    &__name {
+      color: gray;
+      margin-right: 10px;
+    }
+    &__add {
+      color: blue;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+#tag-result {
+  .js-result-tag {
+    display: inline-flex;
+    padding: 5px 10px;
+    color: white;
+    background-color: #c3c6d2;
+    border-radius: 10px;
+    margin: 5px 10px;
+    &__name {
+      margin-right: 10px;
+    }
+    &__remove-btn {
+      width: 15px;
+      height: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,4 @@
+.tags
+  = link_to image_tag('tag.png', class: "tags__head")
+  .tags__lists
+    = render partial: 'shared/tag', collection: @tags

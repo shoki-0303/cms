@@ -1,0 +1,36 @@
+.rankings {
+  &__head {
+    background: image-url('poping.png');
+  }
+  &__article {
+    width: 305px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    .eye-catch {
+      width: 100px;
+      height: 70px;
+    }
+    &__content {
+      width: 200px;
+      position: absolute;
+      top: 10px;
+      left: 120px;
+      color: black;
+      .rankings__article__category {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 2px 10px;
+        background-color: pink;
+        border-radius: 10px;
+      }
+      .rankings__article__title {
+        padding-top: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

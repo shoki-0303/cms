@@ -1,0 +1,10 @@
+.release-article__content__header
+  = link_to @article.category.name, category_path(@article.category), class: "release-article__content__header__category"
+%h1.release-article__content__title
+  = @article.title
+.release-article__content__tags
+  = render partial: 'articles/article_tag', collection: @article_tags
+%p.release-article__content__description
+  = @article.description
+%p.release-article__content__body
+  = markdown(@article.body).html_safe

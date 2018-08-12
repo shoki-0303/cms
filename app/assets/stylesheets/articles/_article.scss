@@ -1,0 +1,75 @@
+.release-article {
+  @include clearfix();
+  &__content {
+    float: left;
+    margin: 20px;
+    margin-left: 150px;
+    width: 800px;
+    padding: 20px;
+    &__header {
+      height: 60px;
+      &__category {
+        font-size: 1.5rem;
+        padding: 7px 15px;
+        color: white;
+        font-weight: bold;
+        border: solid $emerald-green;
+        background-color: $emerald-green;
+        display: inline-block;
+        border-radius: 20px;
+      }
+    }
+    & h1 {
+      font-size: 3.0rem;
+      padding: 15px;
+      padding-bottom: 5px;
+      border-bottom: solid 3px $emerald-green;
+      margin-bottom: 10px;
+    }
+    &__tags {
+      padding: 10px;
+      display: flex;
+    &__tag {
+      margin-left: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: solid 1.4px rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: gray;
+    }
+    }
+    & h2 {
+      font-size: 2.5rem;
+      padding: 15px;
+      font-weight: bold;
+      color: #494949;
+      background: #f4f4f4;
+      border-left: solid 5px $emerald-green;
+      border-bottom: solid 3px #d7d7d7;
+      margin: 20px 0;
+    }
+    & h3 {
+      font-size: 2.0rem;
+      padding: 15px;
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+      border-left: solid 5px $emerald-green;
+      margin: 20px 0;
+    }
+    & h4 {
+      font-size: 2.0rem;
+      padding: 15px;
+      border-bottom: dashed 2px $emerald-green;
+      margin: 20px 0;
+    }
+    & p {
+      font-size: 1.5rem;
+      padding: 15px 10px 0;
+      line-height: 3.0rem;
+    }
+    & strong {
+      font-weight: bold;
+    }
+  }
+}
