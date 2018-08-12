@@ -17,6 +17,7 @@
           = @category.content
     = render partial: 'shared/article', collection: @articles
   .content__subs
+    = link_to image_tag('ranking.png', class: "rankings__head")
     = render partial: 'shared/ranking_article', collection: @ranking_articles
     = render partial: 'shared/tags'
 = render partial: 'shared/footer'
