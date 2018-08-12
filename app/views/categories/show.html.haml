@@ -9,13 +9,15 @@
   .content__articles
     = image_tag('pickup.png', class: "pop")
     .categories__category
-      = image_tag(@category.image, class: "categories__category__image")
-      .categories__category__name
-        = @category.name
-      .categories__category__content
-        = @category.content
+      = link_to category_path(@category) do
+        = image_tag(@category.image, class: "categories__category__image")
+        .categories__category__name
+          = @category.name
+        .categories__category__content
+          = @category.content
     = render partial: 'shared/article', collection: @articles
   .content__subs
-    = render partial: 'shared/rankings'
+    = link_to image_tag('ranking.png', class: "rankings__head")
+    = render partial: 'shared/ranking_article', collection: @ranking_articles
     = render partial: 'shared/tags'
 = render partial: 'shared/footer'

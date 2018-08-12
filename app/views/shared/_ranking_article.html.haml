@@ -1,0 +1,8 @@
+= link_to article_path(ranking_article) do
+  %li.rankings__article
+    = image_tag(ranking_article.image, class: "eye-catch")
+    %ul.rankings__article__content
+      %li.rankings__article__category
+        = ranking_article.category.name
+      %li.rankings__article__title
+        = ranking_article.title

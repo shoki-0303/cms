@@ -1,7 +1,7 @@
 = render partial: 'shared/header'
 .content
   .content__categories
-    = link_to image_tag('category.png', class: "content__categories__title")
+    = link_to image_tag('category.png', class: "content__categories__title"), categories_path
     %ul
       - @categories.each do |category|
         %li.category__name
@@ -10,6 +10,9 @@
     = image_tag('pickup.png', class: "pop")
     = render partial: 'shared/article', collection: @articles
   .content__subs
-    = render partial: 'shared/rankings'
+    .rankings
+      = image_tag('ranking.png', class: "rankings__head")
+      %ul
+        = render partial: 'shared/ranking_article', collection: @ranking_articles
     = render partial: 'shared/tags'
 = render partial: 'shared/footer'

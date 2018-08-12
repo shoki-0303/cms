@@ -1,8 +1,10 @@
 class TagsController < ApplicationController
   include CallCategories
   include CallTags
+  include CallRankings
   before_action :only_admin
   before_action :set_tag, only: [:show, :destroy]
+  before_action :set_ranking, only: [:show]
 
   def index
     @tag = Tag.new
@@ -43,5 +45,9 @@ class TagsController < ApplicationController
 
   def set_tag
     @tag = Tag.find(params[:id])
+  end
+
+  def set_ranking
+    call_rankings_ids
   end
 end
