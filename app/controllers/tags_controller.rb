@@ -48,6 +48,6 @@ class TagsController < ApplicationController
   end
 
   def set_ranking
-    @ranking_articles = Article.where(id: call_rankings_ids)
+    call_rankings_ids
   end
 end
