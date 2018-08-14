@@ -50,6 +50,7 @@ group :development, :test do
   gem 'carrierwave'
   gem 'mini_magick'
   gem 'meta-tags'
+  gem 'friendly_id', '~> 5.2.0'
 end
 
 group :development do
