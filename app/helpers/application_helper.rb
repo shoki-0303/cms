@@ -48,4 +48,26 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(html_render, options)
     markdown.render(text)
   end
+
+  def default_meta_tags
+    {
+      site: 'SUCLE',
+      title: 'SUCLE TOP',
+      reverse: true,
+      charset: 'utf-8',
+      description: '女子の生活をもっと豊かにをコンセプトに恋愛、ファション、グルメ、メイク、コスメ、ライフスタイルを中心に記事を集めたwebメディアSUCLEです。インスア映えする写真や恋愛のノウハウなど女子がかわいい、知りたいと思う記事を更新しています。',
+      keywords: ['恋愛', 'ファッション', 'メイク・コスメ'],
+      canonical: request.original_url,
+      separator: '|',
+      icon: { href: image_url('cherry.png') },
+      og: {
+        site_name: 'SUCLE',
+        title: 'SUCLE',
+        description: 'description',
+        type: 'website',
+        url: request.original_url,
+        locale: 'ja_JP',
+      },
+    }
+  end
 end
