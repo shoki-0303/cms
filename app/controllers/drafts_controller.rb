@@ -1,6 +1,6 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_article, only: [:edit, :update, :release]
+  before_action :set_article, only: [:show, :edit, :update, :release]
   def index
     @articles = Article.includes(:user).order("created_at DESC")
   end
@@ -12,6 +12,9 @@ class DraftsController < ApplicationController
       format.html
       format.json
     end
+  end
+
+  def show
   end
 
   def create

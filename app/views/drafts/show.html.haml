@@ -1,0 +1,9 @@
+= render partial: 'shared/header'
+.release-article
+  .release-article__content
+    %h1.release-article__content__title
+      = @article.title
+    %p.release-article__content__description
+      = @article.description
+    %p.release-article__content__body
+      = markdown(@article.body).html_safe
