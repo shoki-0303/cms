@@ -59,6 +59,7 @@ module ApplicationHelper
       keywords: ['恋愛', 'ファッション', 'メイク・コスメ'],
       canonical: request.original_url,
       separator: '|',
+      icon: { href: image_url('cherry.png') },
       og: {
         site_name: 'SUCLE',
         title: 'SUCLE',
