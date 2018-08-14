@@ -1,8 +1,6 @@
 .breadcrumbs {
   display: flex;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 40px;
+  padding: 5px 0 5px 30px;
   font-size: 1.3rem;
   background-color: #80808012;
   &__list:after {
