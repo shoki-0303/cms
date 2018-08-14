@@ -49,6 +49,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'carrierwave'
   gem 'mini_magick'
+  gem 'meta-tags'
 end
 
 group :development do
