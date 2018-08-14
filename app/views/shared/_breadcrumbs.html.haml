@@ -1,0 +1,7 @@
+%ul.breadcrumbs
+  %li.breadcrumbs__list
+    = link_to "home", root_path, class: "breadcrumbs__home"
+  %li.breadcrumbs__list
+    = link_to @category.name, category_path(@category), class: "breadcrumbs__category"
+  %li.breadcrumbs__article
+    = @article.title if @article.present?

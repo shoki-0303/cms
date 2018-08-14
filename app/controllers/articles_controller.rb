@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @article_tags = @article.tags
+    @category = @article.category
     REDIS.zincrby "articles/daily/#{Date.today.to_s}", 1, "#{@article.id}"
     REDIS.expire "articles/daily/#{Date.today.to_s}", 259200
   end
