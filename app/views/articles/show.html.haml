@@ -1,3 +1,4 @@
+- set_meta_tags title: @article.title, description: @article.description, keywords: @article.category.name, og: { title: @article.title, type: 'article', image: @article.image.url }
 = render partial: 'shared/header'
 = render partial: 'shared/breadcrumbs'
 .release-article
