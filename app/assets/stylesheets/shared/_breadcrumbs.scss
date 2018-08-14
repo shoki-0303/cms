@@ -1,0 +1,22 @@
+.breadcrumbs {
+  display: flex;
+  padding: 5px 0 5px 30px;
+  font-size: 1.3rem;
+  background-color: #80808012;
+  &__list:after {
+    content: " / ";
+    padding: 0 10px;
+  }
+  &__home {
+    color: black;
+    &:hover {
+      color: $emerald-green;
+    }
+  }
+  &__category {
+    color: black;
+    &:hover {
+      color: $emerald-green;
+    }
+  }
+}
