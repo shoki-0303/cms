@@ -6,5 +6,6 @@
   = render partial: 'articles/article_tag', collection: @article_tags
 %p.release-article__content__description
   = @article.description
+%ul.release-article__content__index#index-js
 %p.release-article__content__body
   = markdown(@article.body).html_safe
