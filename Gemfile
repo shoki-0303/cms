@@ -38,6 +38,8 @@ gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 gem 'redcarpet'
 gem 'coderay'
+gem 'kaminari'
+gem 'bootstrap', '~> 4.1.1'
 
 
 group :development, :test do

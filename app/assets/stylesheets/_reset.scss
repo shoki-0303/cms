@@ -16,6 +16,9 @@ html{
 }
 a{
     text-decoration: none;
+    &:hover {
+        color: #62cbd0;
+    }
 }
 li{
     list-style: none;

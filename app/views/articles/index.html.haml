@@ -9,6 +9,7 @@
   .content__articles
     = image_tag('pickup.png', class: "pop")
     = render partial: 'shared/article', collection: @articles
+    = paginate @articles
   .content__subs
     .rankings
       = image_tag('ranking.png', class: "rankings__head")

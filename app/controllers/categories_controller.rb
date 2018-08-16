@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @articles = @category.articles
+    @articles = @category.articles.page(params[:page]).per(ARTICLES_PER_PAGE_NUMBER)
   end
 
   def new

@@ -2,7 +2,7 @@ class DraftsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_article, only: [:show, :edit, :update, :release]
   def index
-    @articles = Article.includes(:user).order("created_at DESC")
+    @articles = Article.page(params[:page]).per(ARTICLES_PER_PAGE_NUMBER).includes(:user).order("created_at DESC")
   end
 
   def new
