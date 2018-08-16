@@ -68,6 +68,10 @@ module ApplicationHelper
         url: request.original_url,
         locale: 'ja_JP',
       },
+      twitter: {
+        card: 'summary',
+        site: ''
+      }
     }
   end
 end
