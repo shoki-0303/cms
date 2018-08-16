@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   before_action :set_ranking, only: [:index, :show]
 
   def index
-    @articles = Article.page(params[:page]).per(20).where(release: true).order("created_at DESC")
+    @articles = Article.page(params[:page]).per(Articles_Per_Page).where(release: true).order("created_at DESC")
   end
 
   def show
