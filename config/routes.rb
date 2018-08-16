@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles, only: [:show]
   resources :users, only: [:edit, :update]
-  resources :drafts, only: [:index, :show, :new, :create, :edit, :update] do
+  resources :drafts, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     member do
       get :release
+    end
+    member do
+      get :not_release
     end
   end
   resources :categories, only: [:index, :show, :new, :create, :edit, :update]
