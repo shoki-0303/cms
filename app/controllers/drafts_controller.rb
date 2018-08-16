@@ -1,6 +1,6 @@
 class DraftsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_article, only: [:show, :edit, :update, :destroy, :release]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :release, :not_release]
   def index
     @articles = Article.page(params[:page]).per(ARTICLES_PER_PAGE_NUMBER).includes(:user).order("created_at DESC")
   end
@@ -45,6 +45,11 @@ class DraftsController < ApplicationController
 
   def release
     @article.update_attributes(release: true) if current_user.admin_flg == true
+    redirect_to drafts_path
+  end
+
+  def not_release
+    @article.update_attributes(release: false) if current_user.admin_flg == true
     redirect_to drafts_path
   end
 
