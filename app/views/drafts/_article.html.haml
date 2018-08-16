@@ -10,7 +10,7 @@
       = article.user.name
   .drafts__article__right
     =link_to '編集', edit_draft_path(article), class: "edit__btn" if is_your_article?(article, current_user) or admin_user?(current_user)
-    =link_to '削除', "#", class: "destroy__btn" if admin_user?(current_user)
+    =link_to '削除', draft_path(article), method: :delete, class: "destroy__btn" if admin_user?(current_user)
     =link_to '公開', release_draft_path(article), class: "release__btn" if admin_user?(current_user) && article.release == false
     =link_to '済', "#", class: "released__btn" if admin_user?(current_user) && article.release == true
     =link_to 'プレビュー', draft_path(article), class: "preview__btn" if is_your_article?(article, current_user) or admin_user?(current_user)
