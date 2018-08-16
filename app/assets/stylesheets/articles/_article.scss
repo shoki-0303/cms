@@ -17,6 +17,10 @@
         background-color: $emerald-green;
         display: inline-block;
         border-radius: 20px;
+        &:hover {
+          background-color: white;
+          color: $emerald-green;
+        }
       }
     }
     & h1 {
