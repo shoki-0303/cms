@@ -23,3 +23,4 @@
   .drafts-main
     %ul.drafts__articles
       = render partial: 'drafts/article', collection: @articles
+      = paginate @articles
