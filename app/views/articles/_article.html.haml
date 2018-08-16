@@ -6,6 +6,7 @@
   = render partial: 'articles/article_tag', collection: @article_tags
 %p.release-article__content__description
   = @article.description
+= render partial: 'articles/sns_share'
 = image_tag(@article.image, class: "release-article__content__image")
 %ul.release-article__content__index#index-js
 %p.release-article__content__body
